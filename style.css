@@ -1,0 +1,51 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+
+}
+.heading{
+    margin-top: 7vh;
+}
+h1{
+    font-size: 3rem;
+}
+h3{
+    font-size: 1rem;
+}
+.game{
+    margin-top: 15vh;
+}
+.compGenerated{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 7vh;
+}
+#numberInput{
+    font-size: 3rem;
+    margin-bottom: 7vh;
+}
+button{
+    
+    font-size: 1.5rem;
+    padding: 10px 50px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+.hide{
+    display: none;
+}
+.right , .wrong {
+    margin-top: 18vh;
+    margin-bottom: 7vh;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media (max-width:800px) {
+    
+#numberInput{
+    width: 80vw;
+}
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Memory Game</h1>
+        <h3>Remember the no. on screen </h3>
+    </div>
+    <div class="game">
+        <div class="rememberScreen">
+            <div class="compGenerated">
+                12334
+            </div>
+            <button onclick="remember()">GO</button>
+        </div>
+        <div class="inputScreen hide">
+            <div class="userInput">
+                <input type="number" id="numberInput">
+            </div>
+            <button id="guessButton" onclick="guessedNumber()">Submit</button>
+        </div>
+     
+        <!-- <div class="resultScreen"> -->
+            <div class="right hide">
+                You guessed it right
+            </div>
+            <div class="wrong hide">
+                wrong guess , better luck next time 
+            </div>
+        <!-- </div> -->
+
+        <div class="newGame hide">
+            <button id="tryAgain" >Try Again</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

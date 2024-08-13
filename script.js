@@ -17,12 +17,42 @@ let newGame=document.querySelector(".newGame") ;
 
 
 compGenerated.innerText=`${randomInteger}` ;
+let generatedNumber = '';
 
-function remember(){
-    rememberScreen.classList.add("hide") ;
-    inputScreen.classList.remove("hide");
-    h3text.innerText="Guess the number " ;
+function remember() {
+    // Hide the remember screen and show the countdown screen
+    rememberScreen.classList.add('hide');
+    const countdownElement = document.querySelector('.countdown');
+    const countdownScreen = document.querySelector('.countdownScreen');
+    countdownScreen.classList.remove('hide');
+
+    // Countdown timer
+    let countdown = 4;
+    countdownElement.textContent = `wait for ${countdown} ....`;
+
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        countdownElement.textContent =`wait for ${countdown} ....`;
+
+        if (countdown === 0) {
+            clearInterval(countdownInterval);
+            countdownScreen.classList.add('hide');
+            inputScreen.classList.remove('hide');
+            h3text.innerText = "Guess the number";
+        }
+    }, 1000); // 1-second interval
+
+    // Display the generated number during the countdown
+    generatedNumber = randomInteger;
+    compGenerated.textContent = generatedNumber;
+
+    // Hide the generated number after 4 seconds
+    setTimeout(() => {
+        compGenerated.textContent = '';
+    }, 4000); // 4-second delay
 }
+
+
 
 
 const refreshButton = document.getElementById('tryAgain');

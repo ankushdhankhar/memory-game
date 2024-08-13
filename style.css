@@ -17,6 +17,19 @@ h3{
 .game{
     margin-top: 15vh;
 }
+.countdownScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    font-size:5rem;
+    font-weight:lighter;
+}
+
+.countdown {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+}
 .compGenerated{
     font-size: 3rem;
     font-weight: bolder;
